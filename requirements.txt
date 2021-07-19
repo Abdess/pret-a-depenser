@@ -2,7 +2,9 @@
 matplotlib
 numpy
 pandas
+scipy
 seaborn
 shap
 sklearn
+statsmodels
 xgboost
