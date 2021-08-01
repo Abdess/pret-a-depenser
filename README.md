@@ -10,11 +10,11 @@ Données financières + Classification par apprentissage automatique = Rembourse
 
 Pour accorder un crédit à la consommation, l’entreprise calcule la probabilité qu’un client le rembourse, ou non. Elle souhaite donc développer un algorithme de scoring pour aider à décider si un prêt peut être accordé à un client.
 
-Les chargés de relation client seront les utilisateurs du modèle de scoring. Puisqu’ils s’adressent aux clients, ils ont besoin que votre modèle soit facilement interprétable. Les chargés de relation souhaitent, en plus, disposer d’une mesure de l’importance des variables qui ont poussé le modèle à donner cette probabilité à un client.
+Les chargés de relation client seront les utilisateurs du modèle de scoring. Puisqu’ils s’adressent aux clients, ils ont besoin que notre modèle soit facilement interprétable. Les chargés de relation souhaitent, en plus, disposer d’une mesure de l’importance des variables qui ont poussé le modèle à donner cette probabilité à un client.
 
 ### Activité
 
-Augmenter la précision de savoir si un prêt sera remboursé ou non.
+Construire un modèle du scoring pour savoir si un prêt sera remboursé ou non.
 
 ### Données
 
@@ -25,7 +25,7 @@ Augmenter la précision de savoir si un prêt sera remboursé ou non.
 
 ### application_{train|test}.csv
 
-Il s'agit du tableau principal, divisé en deux fichiers pour Train (avec TARGET) et Test (sans TARGET). Données statiques pour toutes les applications. Une ligne représente un prêt dans notre échantillon de données.
+Il s'agit de la table principale, divisé en deux fichiers pour Train (avec TARGET) et Test (sans TARGET). Données statiques pour toutes les applications. Une ligne représente un prêt dans notre échantillon de données.
 
 ### bureau.csv
 
@@ -33,15 +33,15 @@ Tous les crédits précédents du client fournis par d'autres institutions finan
 
 ### bureau_balance.csv
 
-Soldes mensuels des crédits précédents dans Credit Bureau. Ce tableau comporte une ligne pour chaque mois de l'historique de chaque crédit précédent déclaré au Credit Bureau - c'est-à-dire que le tableau comporte ( nombre de prêts dans l'échantillon x nombre de crédits précédents relatifs x nombre de mois où nous avons un historique observable pour les crédits précédents) lignes.
+Soldes mensuels des crédits précédents dans Credit Bureau. Cette table comporte une ligne pour chaque mois de l'historique de chaque crédit précédent déclaré au Credit Bureau - c'est-à-dire que la table comporte ( nombre de prêts dans l'échantillon x nombre de crédits précédents relatifs x nombre de mois où nous avons un historique observable pour les crédits précédents) lignes.
 
 ### POS_CASH_balance.csv
 
-Instantanés des soldes mensuels des prêts POS (Point Of Sales, Point De Vente en français) et cash précédents que le demandeur a eu avec Prêt à dépenser. Ce tableau comporte une ligne pour chaque mois de l'historique de chaque crédit précédent au Prêt à dépenser (crédit à la consommation et prêts en espèces) lié aux prêts de notre échantillon - c'est-à-dire que le tableau comporte (nombre de prêts dans l'échantillon x nombre de crédits précédents relatifs x nombre de mois dans lesquels nous avons un historique observable pour les crédits précédents) lignes.
+Instantanés des soldes mensuels des prêts POS (Point Of Sales, Point De Vente en français) et cash précédents que le demandeur a eu avec Prêt à dépenser. Cette table comporte une ligne pour chaque mois de l'historique de chaque crédit précédent au Prêt à dépenser (crédit à la consommation et prêts en espèces) lié aux prêts de notre échantillon - c'est-à-dire que la table comporte (nombre de prêts dans l'échantillon x nombre de crédits précédents relatifs x nombre de mois dans lesquels nous avons un historique observable pour les crédits précédents) lignes.
 
 ### credit_card_balance.csv
 
-Instantanés des soldes mensuels des cartes de crédit précédentes que le demandeur possède auprès de Prêt à dépenser. Ce tableau comporte une ligne pour chaque mois de l'historique de chaque crédit précédent chez Prêt à dépenser (crédit à la consommation et prêts de trésorerie) lié aux prêts de notre échantillon - c'est-à-dire que le tableau comporte (#prêts dans l'échantillon x nombre de cartes de crédit précédentes relatives x nombre de mois où nous avons un historique observable pour la carte de crédit précédente) lignes.
+Instantanés des soldes mensuels des cartes de crédit précédentes que le demandeur possède auprès de Prêt à dépenser. Cette table comporte une ligne pour chaque mois de l'historique de chaque crédit précédent chez Prêt à dépenser (crédit à la consommation et prêts de trésorerie) lié aux prêts de notre échantillon - c'est-à-dire que la table comporte (#prêts dans l'échantillon x nombre de cartes de crédit précédentes relatives x nombre de mois où nous avons un historique observable pour la carte de crédit précédente) lignes.
 
 ### previous_application.csv
 
